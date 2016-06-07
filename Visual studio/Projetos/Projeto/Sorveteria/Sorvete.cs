@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Sorveteria {
+    sealed class Sorvete : ISorvete{
+        public string Nome {
+            get {
+                return "Novo sorvete!";
+            }
+        }
+
+        public double Preco {
+            get {
+                return 1.5;
+            }
+        }
+    }
+}

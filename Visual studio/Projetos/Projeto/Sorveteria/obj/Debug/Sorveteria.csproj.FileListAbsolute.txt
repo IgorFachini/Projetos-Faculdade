@@ -1,0 +1,9 @@
+C:\Users\guigu_000\Documents\GitHub\Projetos-Faculdade\Visual studio\Projetos\Projeto\Sorveteria\bin\Debug\Sorveteria.exe.config
+C:\Users\guigu_000\Documents\GitHub\Projetos-Faculdade\Visual studio\Projetos\Projeto\Sorveteria\obj\Debug\Sorveteria.csprojResolveAssemblyReference.cache
+C:\Users\guigu_000\Documents\GitHub\Projetos-Faculdade\Visual studio\Projetos\Projeto\Sorveteria\obj\Debug\Sorveteria.Form1.resources
+C:\Users\guigu_000\Documents\GitHub\Projetos-Faculdade\Visual studio\Projetos\Projeto\Sorveteria\obj\Debug\Sorveteria.Properties.Resources.resources
+C:\Users\guigu_000\Documents\GitHub\Projetos-Faculdade\Visual studio\Projetos\Projeto\Sorveteria\obj\Debug\Sorveteria.csproj.GenerateResource.Cache
+C:\Users\guigu_000\Documents\GitHub\Projetos-Faculdade\Visual studio\Projetos\Projeto\Sorveteria\bin\Debug\Sorveteria.exe
+C:\Users\guigu_000\Documents\GitHub\Projetos-Faculdade\Visual studio\Projetos\Projeto\Sorveteria\bin\Debug\Sorveteria.pdb
+C:\Users\guigu_000\Documents\GitHub\Projetos-Faculdade\Visual studio\Projetos\Projeto\Sorveteria\obj\Debug\Sorveteria.exe
+C:\Users\guigu_000\Documents\GitHub\Projetos-Faculdade\Visual studio\Projetos\Projeto\Sorveteria\obj\Debug\Sorveteria.pdb
