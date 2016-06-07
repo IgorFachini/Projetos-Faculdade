@@ -24,7 +24,7 @@ namespace Sorveteria
             c = new SorveteComCobertura(s);
 
             SorveteComCobertura d;
-            d = new SorveteComCobertura(s);
+            d = new SorveteComCobertura(c);
 
             MessageBox.Show("Sorvete com cobertura:" +d.Preco);
 
