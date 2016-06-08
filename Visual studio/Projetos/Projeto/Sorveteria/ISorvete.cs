@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Sorveteria {
     interface ISorvete {
         double Preco { get; }
+        String Nome { get;  }
        
     }
 }

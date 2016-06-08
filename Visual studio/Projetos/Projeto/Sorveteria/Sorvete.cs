@@ -17,5 +17,11 @@ namespace Sorveteria {
                 return 1.5;
             }
         }
+
+        string ISorvete.Nome {
+            get {
+                return "Novo";
+            }
+        }
     }
 }

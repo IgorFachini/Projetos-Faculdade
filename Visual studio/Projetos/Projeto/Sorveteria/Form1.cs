@@ -17,16 +17,19 @@ namespace Sorveteria
             InitializeComponent();
             Sorvete s = new Sorvete();
 
-            MessageBox.Show("Sorvete:" + s.Preco);
+            MessageBox.Show(s.Preco+s.Nome);
 
 
             SorveteComCobertura c;
             c = new SorveteComCobertura(s);
 
-            SorveteComCobertura d;
-            d = new SorveteComCobertura(c);
+            TesteCobertura d;
+            d = new TesteCobertura(c);
 
-            MessageBox.Show("Sorvete com cobertura:" +d.Preco);
+            SorveteComCobertura x;
+            x = new SorveteComCobertura(d);
+
+            MessageBox.Show(x.Preco + x.Nome);
 
 
         }

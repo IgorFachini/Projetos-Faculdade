@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Sorveteria {
-    class SorveteComCobertura : ISorvete {
+    class TesteCobertura : ISorvete {
         //Component : IComponent
         ISorvete s;
 
 
-        public SorveteComCobertura(ISorvete s) {
+        public TesteCobertura(ISorvete s) {
             this.s = s;
-            MessageBox.Show("Add chocolate!");
+            MessageBox.Show("Add Morango!");
         }
 
         public string Nome {
             get {
-                return this.s.Nome + " ADD Chocolate!";
+                return this.s.Nome + " ADD Morango!";
             }
         }
 
