@@ -32,6 +32,9 @@
             this.granulado = new System.Windows.Forms.Button();
             this.balinhas = new System.Windows.Forms.Button();
             this.canudo = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // chocolate
@@ -74,6 +77,7 @@
             // 
             this.coco.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coco.Image = ((System.Drawing.Image)(resources.GetObject("coco.Image")));
+            this.coco.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.coco.Location = new System.Drawing.Point(582, 12);
             this.coco.Name = "coco";
             this.coco.Size = new System.Drawing.Size(184, 294);
@@ -130,11 +134,31 @@
             this.canudo.UseVisualStyleBackColor = true;
             this.canudo.Click += new System.EventHandler(this.canudo_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(772, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(218, 200);
+            this.dataGridView1.TabIndex = 8;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(772, 339);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(218, 151);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Gerar Nota";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // MontagemSorvete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 502);
+            this.ClientSize = new System.Drawing.Size(1002, 500);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.canudo);
             this.Controls.Add(this.balinhas);
             this.Controls.Add(this.granulado);
@@ -145,6 +169,7 @@
             this.Controls.Add(this.chocolate);
             this.Name = "MontagemSorvete";
             this.Text = "MontagemSorvete";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -159,5 +184,7 @@
         private System.Windows.Forms.Button granulado;
         private System.Windows.Forms.Button balinhas;
         private System.Windows.Forms.Button canudo;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }
