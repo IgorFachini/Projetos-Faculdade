@@ -13,10 +13,13 @@ namespace SORVETERIA_5 {
         public SABORES_POTE() {
         }
 
-        public SABORES_POTE(double valor) {
+        public SABORES_POTE(String usuario, double valor) {
             InitializeComponent();
+            this.usuario = usuario;
             this.valorRecipiente = valor;
+            nomeUser.Text = usuario;
         }
+        String usuario;
         String recipiente = "Pote"; 
         double valorRecipiente;
 
@@ -62,7 +65,7 @@ namespace SORVETERIA_5 {
             if (contador == 0) {
                 MessageBox.Show("SELECIONE AO MENOS UM SABOR!");
             } else {
-                COMPLEMENTO complemento = new COMPLEMENTO(recipiente, valorRecipiente, sabores, contador);
+                COMPLEMENTO complemento = new COMPLEMENTO(usuario, recipiente, valorRecipiente, sabores, contador);
                 this.Hide();
                 complemento.Show();
             }
@@ -82,6 +85,18 @@ namespace SORVETERIA_5 {
 
         private void label8_Click(object sender, EventArgs e) {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e) {
+
+        }
+
+        private void sair_Click(object sender, EventArgs e) {
+            if (MessageBox.Show("SAIR DESTE USUARIO?", "LOGOFF?", MessageBoxButtons.YesNo) == DialogResult.Yes) {
+                this.Hide();
+                Login lg = new Login();
+                lg.Show();
+            }
         }
     }
 }

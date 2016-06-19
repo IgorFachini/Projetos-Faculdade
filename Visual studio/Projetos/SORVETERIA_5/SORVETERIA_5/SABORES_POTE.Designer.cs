@@ -44,6 +44,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.chocolate = new System.Windows.Forms.Button();
+            this.sair = new System.Windows.Forms.Button();
+            this.nomeUser = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -218,6 +220,7 @@
             this.button6.Size = new System.Drawing.Size(113, 107);
             this.button6.TabIndex = 9;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -269,11 +272,32 @@
             this.chocolate.TabIndex = 1;
             this.chocolate.UseVisualStyleBackColor = true;
             // 
+            // sair
+            // 
+            this.sair.Location = new System.Drawing.Point(575, 15);
+            this.sair.Name = "sair";
+            this.sair.Size = new System.Drawing.Size(45, 26);
+            this.sair.TabIndex = 32;
+            this.sair.Text = "Sair";
+            this.sair.UseVisualStyleBackColor = true;
+            this.sair.Click += new System.EventHandler(this.sair_Click);
+            // 
+            // nomeUser
+            // 
+            this.nomeUser.AutoSize = true;
+            this.nomeUser.Location = new System.Drawing.Point(563, -1);
+            this.nomeUser.Name = "nomeUser";
+            this.nomeUser.Size = new System.Drawing.Size(35, 13);
+            this.nomeUser.TabIndex = 31;
+            this.nomeUser.Text = "label9";
+            // 
             // SABORES_POTE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(632, 365);
+            this.Controls.Add(this.sair);
+            this.Controls.Add(this.nomeUser);
             this.Controls.Add(this.pronto);
             this.Controls.Add(this.chocolatee);
             this.Controls.Add(this.chicletes);
@@ -326,5 +350,7 @@
         private System.Windows.Forms.CheckBox chicletes;
         private System.Windows.Forms.CheckBox chocolatee;
         private System.Windows.Forms.Button pronto;
+        private System.Windows.Forms.Button sair;
+        private System.Windows.Forms.Label nomeUser;
     }
 }

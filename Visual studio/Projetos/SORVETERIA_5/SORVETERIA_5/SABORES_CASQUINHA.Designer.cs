@@ -34,6 +34,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.sair = new System.Windows.Forms.Button();
+            this.nomeUser = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // misto
@@ -150,11 +152,32 @@
             this.label8.Text = "______________________________________";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
+            // sair
+            // 
+            this.sair.Location = new System.Drawing.Point(484, 16);
+            this.sair.Name = "sair";
+            this.sair.Size = new System.Drawing.Size(45, 26);
+            this.sair.TabIndex = 14;
+            this.sair.Text = "Sair";
+            this.sair.UseVisualStyleBackColor = true;
+            this.sair.Click += new System.EventHandler(this.sair_Click);
+            // 
+            // nomeUser
+            // 
+            this.nomeUser.AutoSize = true;
+            this.nomeUser.Location = new System.Drawing.Point(472, 0);
+            this.nomeUser.Name = "nomeUser";
+            this.nomeUser.Size = new System.Drawing.Size(35, 13);
+            this.nomeUser.TabIndex = 13;
+            this.nomeUser.Text = "label9";
+            // 
             // SABORES_CASQUINHA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(535, 312);
+            this.Controls.Add(this.sair);
+            this.Controls.Add(this.nomeUser);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
@@ -187,5 +210,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button sair;
+        private System.Windows.Forms.Label nomeUser;
     }
 }

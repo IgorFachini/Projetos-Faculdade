@@ -34,6 +34,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.nomeUser = new System.Windows.Forms.Label();
+            this.sair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cascao
@@ -148,12 +150,34 @@
             this.label8.Size = new System.Drawing.Size(373, 24);
             this.label8.TabIndex = 10;
             this.label8.Text = "_________________________________";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // nomeUser
+            // 
+            this.nomeUser.AutoSize = true;
+            this.nomeUser.Location = new System.Drawing.Point(365, 0);
+            this.nomeUser.Name = "nomeUser";
+            this.nomeUser.Size = new System.Drawing.Size(35, 13);
+            this.nomeUser.TabIndex = 11;
+            this.nomeUser.Text = "label9";
+            // 
+            // sair
+            // 
+            this.sair.Location = new System.Drawing.Point(361, 16);
+            this.sair.Name = "sair";
+            this.sair.Size = new System.Drawing.Size(45, 26);
+            this.sair.TabIndex = 12;
+            this.sair.Text = "Sair";
+            this.sair.UseVisualStyleBackColor = true;
+            this.sair.Click += new System.EventHandler(this.sair_Click);
             // 
             // RECIPIENTE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(418, 300);
+            this.Controls.Add(this.sair);
+            this.Controls.Add(this.nomeUser);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
@@ -167,6 +191,7 @@
             this.Controls.Add(this.casquinha);
             this.Name = "RECIPIENTE";
             this.Text = "RECIPIENTE";
+            this.Load += new System.EventHandler(this.RECIPIENTE_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,6 +210,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label nomeUser;
+        private System.Windows.Forms.Button sair;
     }
 }
 

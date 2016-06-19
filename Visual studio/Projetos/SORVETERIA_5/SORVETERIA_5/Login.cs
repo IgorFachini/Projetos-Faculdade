@@ -25,7 +25,7 @@ namespace SORVETERIA_5
 
             cadastro.ShowDialog();
 
-            Application.Exit();
+            //Application.Exit();
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
@@ -63,13 +63,13 @@ namespace SORVETERIA_5
                         reader = command.ExecuteReader();
                         if (reader.Read())
                         {
-                            RECIPIENTE mts = new RECIPIENTE();
+                            RECIPIENTE mts = new RECIPIENTE(usuario);
 
                             this.Hide();
 
                             mts.ShowDialog();
 
-                            Application.Exit();
+                            //Application.Exit();
                         }
                         else
                         {

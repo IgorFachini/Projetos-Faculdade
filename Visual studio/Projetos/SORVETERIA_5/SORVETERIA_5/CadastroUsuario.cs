@@ -103,7 +103,7 @@ namespace SORVETERIA_5
 
             lg.ShowDialog();
 
-            Application.Exit();
+            //Application.Exit();
         }
     }
 }
