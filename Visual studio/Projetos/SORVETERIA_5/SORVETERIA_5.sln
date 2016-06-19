@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SORVETERIA_5", "SORVETERIA_5\SORVETERIA_5.csproj", "{9AE6BF5A-67F3-43CF-AAD2-917BF078F500}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SorvetoGamia", "SORVETERIA_5\SorvetoGamia.csproj", "{9AE6BF5A-67F3-43CF-AAD2-917BF078F500}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

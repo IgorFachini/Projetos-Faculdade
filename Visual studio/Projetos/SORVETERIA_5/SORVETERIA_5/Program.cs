@@ -13,7 +13,7 @@ namespace SORVETERIA_5 {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RECIPIENTE());
+            Application.Run(new Login());
         }
     }
 }
