@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SorveteriaGamb
 {
-    public partial class Inicial : Form
+    public partial class Login : Form
     {
-        public Inicial()
+        public Login()
         {
             InitializeComponent();
         }

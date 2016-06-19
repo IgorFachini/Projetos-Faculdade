@@ -1,6 +1,6 @@
 ﻿namespace SorveteriaGamb
 {
-    partial class Inicial
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
