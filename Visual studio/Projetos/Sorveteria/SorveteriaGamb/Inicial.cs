@@ -16,5 +16,14 @@ namespace SorveteriaGamb
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e) {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            double valor = Double.Parse(label1.Text);
+            label1.Text = (valor + 2) + "";
+        }
     }
 }
