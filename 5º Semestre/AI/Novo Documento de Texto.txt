@@ -1,0 +1,7 @@
+@relation joga_tenis
+@attribute tempo {sol, chuva, nublado}
+@attribute temperatura real
+@attribute humildade real
+@attribute vento {forte, fraco}
+@attribute joga {sim, nao}
+@data

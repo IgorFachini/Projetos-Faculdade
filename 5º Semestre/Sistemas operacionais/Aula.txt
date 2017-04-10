@@ -1,0 +1,21 @@
+Usuario
+Software
+Sistema Operacional
+Hardware
+
+So vv
+Kernel > Processo > CPU > Monuprocessado -> 1 CPU
+	 		> Multiprocessado -> N CPU
+       > Memoria  > RAM > DD3 		
+	          > ROM > BIOS	
+       > I/O	  > DISCO
+		  > Rool
+		  > CD/DVD
+		  > USB  
+
+
+Multitarefa -
+
+Executando -> Espera -> Pronto
+<---------------------------->
+Processos - A B C, Um de cada vez aos poucos, A depois B depois C

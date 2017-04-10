@@ -1,0 +1,25 @@
+@relation Comprar_computador
+
+% ID numeric "Não sera"
+
+@attribute Idade		{<=30,31..40, >40}
+@attribute Renda		{alta, media, baixa}
+@attribute Estudante		{Sim, nao}
+@attribute Crédito		{excelente, bom}
+@attribute CompraComputador	{sim, nao}
+
+@data
+<=30, 	alta, 	nao, 	bom, 		nao
+<=30, 	alta, 	nao, 	bom, 		nao
+31..40, alta, 	nao, 	bom, 		sim
+>40, 	media, 	nao, 	bom, 		sim
+>40, 	baixa, 	sim, 	bom, 		sim
+>40, 	baixa, 	sim, 	excelente, 	nao
+31..40, baixa, 	sim, 	excelente, 	sim
+<=30, 	media,	nao,	bom,		nao
+<=30,	baixa,	sim,	bom,		sim
+>40,	media,	sim,	bom,		sim
+<=30,	media,	sim,	excelente,	sim
+31..40,	media,	nao,	excelente,	sim
+31..40,	alta,	sim,	bom,		sim
+>40,	media,	nao,	excelente,	nao

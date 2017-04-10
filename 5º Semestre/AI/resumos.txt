@@ -1,0 +1,42 @@
+Melhor hipotese : Melhor capacidade para varios cenarios.
+
+Supervionado : Eu sei que de quando chega a tal quantidade de dados é tal resultado. Digamos rotulamos tudo.
+N Supervionado : Conjunto de informações - > função que permita separalas. Mas que de cara, veja e resultado sei oque é, banana -> comida. 
+Por reforço: De tanto fazer eu aprendo.
+
+Resubstutiução: Conhecer todas as opções
+
+Protocolo Rodalt: Nao usa toda base, Particiona em varias partes,
+
+Susbstituição:
+
+Validação cruzada: divide em varias partes em pastas(fold),
+
+Implimentação de arvore de decisao: Decisoes, 
+
+Baseada em instancias:
+
+K-NN :Classificar x atribuindo a ele o rotulo representado mais frequentemente dentre as k amostras. 
+K - > Numero de visinhos
+--> VAn: Simplicidade Des: Necessario definir o K
+
+
+K-Means - Algoritmo baseia-se na minimização de uma medida de custo, a distancia interna entre os padroes de um agrupamento.
+A minimização do custo garante encontrar um minimo local da função objetivo, que dependera do ponto inicial do algoritmo.
+->Meta
+	A classificação de uma amostra desconhecida é feita com base nos centroid.
+->Ini
+
+Mediçoes
+TP:True positive
+-Acerto positivo
+TN:True negative
+-Rejeição correta
+FP:False positive
+-False alarm
+FN:False negative
+-Perda da rejeição
+Ex:
+Foi - Era
+T     F  FP
+F     T  FN

@@ -1,0 +1,120 @@
+Mac Osx
+
+-- Gerenciamento de processos fazem de forma automatica, ou seja processos que travarem não ira interferir nos demias processos.
+-- processos -
+-BSD - INTERFACE -
+-MACH - Aplicavativos em modo seguro
+
+Threads - Presentes na camada Mach.
+_prioridade
+
+Processo de escalonamento - 
+-Distribuição de processos.
+-Rensobalidade -> MACH
+Filas de prioridade em 4 grupos
+=--------------------------------------------------------=======================
+UNIX
+
+Exploração multi-usuario,multi-tarefas, ou seja permite executar varios programas simultaneamente.
+Reescrito em Linguagem C
+
+-EP
+-Prioridades
+--Processos de mesma prioridade, são executadas um pouco de cada ves.
+--9 estados
+---Executando em modo usuario
+---.................. nucleo(kernel)
+---
+DISTRIBUIÇÔES
+Caraca-
+1-
+2-
+3- Funções que são iguais a UNIX mas não são referenciadas
+
+Threads -
+POSIX - SEQUENCIA DE NORMAS E REGRAS.
+
+=--------------------------------------------------------------====================
+Windows 2000
+
+Windows NT 5
+1º em 1997 oficial em 2000.
+
+Processo.
+
+Escalonamento de processo - Curto Prazo
+				-Medio Prazo
+				-Longo Prazo - Memoria secundaria -> Princiapl.
+Herança
+Filhos 1 pai.
+Pais varios Filhos.
+Trabalho - Coleção de um ou mais processos como uma unidade.
+Processos: recipietes de recursos - Crida por uma chamada Win32.
+-Não garante hierarquia(não tem) ->processos são cirados igualmente.
+Pipes(bystes ou mensagens)
+Threads - se executa quando executa creaThread.
+
+============================================-------------------------------------========
+Linux
+
+Escalonador de processos -> Define prioridades.
+Herança - Mecanismo de inversão de prioridades.
+
+=======================================================================================
+Symian
+
+Hierarquia
+
+Nanokernel - suporta simples fluxos de execução do sitemas.
+Tratados na forma de multi-programação.
+
+Escalonador de processos.
+
+Gerenciado pelo nanokernel que trata os processos com algorimo FIFO e os fluxos com algoritmo Round Robin.
+
+Threads
+
+======================================------------
+Prova - Round Robin
+
+============================================
+IOS
+
+Estados - Em execução - PRonto - Espera -> Esperando recurssos.
+EP - filas divididos em 4 grupos - Normal,Sistema, Kernel, Tempo Real.
+Padeão de Thread nº 31.
+
+Mata pai mata tudo.
+
+Threads.
+NsThread: Controla as demais Threads.
+NsOperatio:Instruções para executar determinadas tarefas.
+NsoperationQueue:
+
+======================================
+W Xp.
+
+Escanalomento
+
+Multitarefa preemptivo e comperativo.
+P-cada encademaneto é executado durante um tempo determinado
+C-Um encadeamento é executado ate que voluntariamente abandone o precessador
+
+Threads.
+
+Unidade de execução para o sistema de operacional.
+Multiplas filas. - possuem prioridades.
+0 a 31.
+Rela time: 16 a 31.
+Normal 0 a 15.
+
+Hierarquia de processos.
+Cada processo tem seu identificados.
+
+7 prioridade do processo.
+====================================================
+
+
+
+
+ 
