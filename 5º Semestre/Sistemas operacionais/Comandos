@@ -1,0 +1,71 @@
+﻿Putty-
+passwd – muda senha
+
+derivado de linux
+ps (aux)– mostrar processo
+kill -mata processo
+nice – muda prioridade de processo
+
+Paremtros
+
+a todos
+u
+x
+
+man – manual de qualquer ferramenta
+top – oque esta sendo executado
+-r = recursividade
+echo echo ola mundo > ola_mundo
+chmod +x ola_mundo = transforma em programa
+
+-v = debug dos comandos
+
+ctrl-l → limpa tela
+
+htop (nao vem instalado) – top so que mais top XD.
+
+putty
+ctrl - limpa ou clear
+ ~ = esta na pasta home
+ history = comandos usados
+ su = troca de usuario
+ pwd = mostra aonde esta
+ ls = lista pasta e diretorios
+ -la = todos
+ mkdir (nome) = cria pasta
+ mv = move ou renomeia arquivos
+ ln -s Ex: documentos/ e = atalho da pasta documentos com e
+ rmdir = remove pastas vazias
+ rm = remove arquivos
+ -> rm -rf = força a apagar os arquivos, incluindo pastas
+ (Não use / ou * com -rf)
+ touch teste.txt = cria arquivo
+ more teste.txt = mostra conteudo(tabula)
+ cat teste.txt = mostra conteudo
+ du = tamanho dos arquivos em bytes, com -h em nomenclatura,-hs total
+ find -name tree = aonde que se encontra o tree pela palavra
+ locate tree = mostra tree organizado
+
+ ifconfig = ip da rede
+
+ ifconfig
+ nano doc1 = abre arquivo doc1 para aeditar
+ mcedit = editae usa mouse, melhor
+ vi = editor  tipo git, insert edita, :w salva, :q quit
+
+ tar
+ z = usando compactor gzip integrado com tar
+ j = compactor mais ativo?
+ c = enpacota
+ v = ver o que ta acontecendo
+ f = status
+
+
+
+cp = copia
+
+
+ -----
+ . = arquivo oculto
+ cd ../asd = absoluto
+ cd /asd = refencial
