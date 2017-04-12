@@ -40,3 +40,20 @@ Ex:
 Foi - Era
 T     F  FP
 F     T  FN
+
+
+=Aprendizagem probabilistica / Bayesiana
+Forne a base para algoritmos de aprendizagem que manipulam probalidades
+-Presisa tem conhecimento priori -> o que vem antes, vi o comportamento da turma... vo aprendendo, esse é o conhecimento que adquiri no semestre de aula.
+requer priori -> requer uma base.
+Requer conhecimeto inicial de varias probabilidades.
+-Não conhecidas, podem ser estimadas.
+--a partir de conhecimento previo
+--dados previamente disponiveis
+--suposiçoes a respeito da forma da distribuição
+Custo computacional linear com o nr. de hipoteses para determinar a hipotese de Bayes.
+Ex: de aplicaçõa:inferencia:P(diagnotico|sintoma)
+Pode ser aplicado com dados faltantes
+
+=Hidden Markow Model(HMM)
+é simples, existe bastante aplicações
