@@ -69,3 +69,33 @@ cp = copia
  . = arquivo oculto
  cd ../asd = absoluto
  cd /asd = refencial
+
+
+
+
+apt= gerenciador de pacote
+apt.conf configuração de proxy
+sources.list = responsavel pelos guadar o link do repositorio
+apt-get update = obten alista de pacotes
+apt-get upgrade = instala os pacotes
+--dist-upgrade = atualiza a distribuição
+--autoremove = remove licho
+--purge = remove tudo
+ mcedit /etc/crontab == arquivo de agendamento
+dpkg -i -r
+mcedit .bashrc = descomenta e fica colorido
+build-dep = instala dependencias
+apt-get remove= remove sem as configurações
+
+
+--dpkg--
+-i = instala
+-r = remove
+
+
+-tar zxvd=f --
+configure
+clean
+make
+make install
+

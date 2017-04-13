@@ -56,4 +56,4 @@ Ex: de aplicaçõa:inferencia:P(diagnotico|sintoma)
 Pode ser aplicado com dados faltantes
 
 =Hidden Markow Model(HMM)
-é simples, existe bastante aplicações
+é simples, existe bastante aplicaçõesm 
