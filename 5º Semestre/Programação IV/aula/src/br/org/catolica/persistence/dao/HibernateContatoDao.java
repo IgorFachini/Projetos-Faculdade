@@ -4,46 +4,46 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import br.org.catolica.entity.Automovel;
-import br.org.catolica.interfaces.AutomovelDAO;
+import br.org.catolica.entity.Contato;
+import br.org.catolica.interfaces.ContatoDAO;
 import br.org.catolica.persistence.JpaUtil;
 
-public class HibernateAutomovelDao implements AutomovelDAO {
+public class HibernateContatoDao implements ContatoDAO {
 
 	private EntityManager em = JpaUtil.createEntityManager();
 	
 	
 	@Override
-	public void salva(Automovel a) {
+	public void salva(Contato a) {
 		em.getTransaction().begin();
 		em.persist(a);
 		em.getTransaction().commit();
 	}
 
 	@Override
-	public List<Automovel> lista() {
+	public List<Contato> lista() {
 		return em.
-				createQuery("select a from Automovel a", Automovel.class).getResultList();
+				createQuery("select a from Contato a", Contato.class).getResultList();
 	}
 
 	@Override
-	public void remove(Automovel a) {
+	public void remove(Contato a) {
 		em.getTransaction().begin();
-		Automovel reference = em.getReference(Automovel.class, a.getId());
+		Contato reference = em.getReference(Contato.class, a.getId());
 		em.remove(reference);
 		em.getTransaction().commit();
 	}
 
 	@Override
-	public void atualiza(Automovel a) {
+	public void atualiza(Contato a) {
 		em.getTransaction().begin();
 		em.merge(a);
 		em.getTransaction().commit();		
 	}
 
 	@Override
-	public Automovel buscaId(Long id) {		
-		return em.find(Automovel.class, id);
+	public Contato buscaId(Long id) {		
+		return em.find(Contato.class, id);
 	}
 	
 	

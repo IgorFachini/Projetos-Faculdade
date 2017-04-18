@@ -1,7 +1,7 @@
 package br.org.catolica.persistence;
 
 import br.org.catolica.entity.Automovel;
-import br.org.catolica.persistence.dao.AutomovelDAO;
+import br.org.catolica.interfaces.AutomovelDAO;
 import br.org.catolica.persistence.dao.HibernateAutomovelDao;
 
 

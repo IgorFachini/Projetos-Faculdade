@@ -3,7 +3,7 @@ package br.org.catolica.persistence;
 import java.util.Date;
 
 import br.org.catolica.entity.Automovel;
-import br.org.catolica.persistence.dao.AutomovelDAO;
+import br.org.catolica.interfaces.AutomovelDAO;
 import br.org.catolica.persistence.dao.HibernateAutomovelDao;
 
 
@@ -18,7 +18,7 @@ public class PersistidorDeAutomovel {
 		auto.setAnoModelo(2015);
 		auto.setMarca("Audi");
 		auto.setModelo("A3 Sedan");
-		auto.setDescricao("bata");
+		auto.setDescricao("batata nova");
 		auto.setDataCadastro(new Date());
 		
 		automovelDao.salva(auto);

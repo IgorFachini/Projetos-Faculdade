@@ -1,4 +1,4 @@
-package br.org.catolica.persistence.dao;
+package br.org.catolica.interfaces;
 
 import java.util.List;
 

@@ -1,25 +1,26 @@
 package br.org.catolica.entity;
 
-import java.io.Serializable;
-import java.util.Calendar;
-
+import java.sql.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Contato implements Serializable {
+public class Contato {
 
 	@Id
 	@GeneratedValue
 	private Long id;
+	
 	private String nome;
+	
 	private String email;
 	
 	@OneToOne
 	private Endereco endereco;
-	private Calendar dataNascimento;
+	
+	private Date dataNascimento;
 
 	public Long getId() {
 		return id;
@@ -45,8 +46,6 @@ public class Contato implements Serializable {
 		this.email = email;
 	}
 
-	
-
 	public Endereco getEndereco() {
 		return endereco;
 	}
@@ -55,12 +54,14 @@ public class Contato implements Serializable {
 		this.endereco = endereco;
 	}
 
-	public Calendar getDataNascimento() {
+	public Date getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(Calendar dataNascimento) {
+	public void setDataNascimento(Date dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 
+	
+ 
 }

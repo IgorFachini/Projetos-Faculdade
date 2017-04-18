@@ -4,46 +4,46 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import br.org.catolica.entity.Automovel;
-import br.org.catolica.interfaces.AutomovelDAO;
+import br.org.catolica.entity.Grupo;
+import br.org.catolica.interfaces.GrupoDAO;
 import br.org.catolica.persistence.JpaUtil;
 
-public class HibernateAutomovelDao implements AutomovelDAO {
+public class HibernateGrupoDao implements GrupoDAO {
 
 	private EntityManager em = JpaUtil.createEntityManager();
 	
 	
 	@Override
-	public void salva(Automovel a) {
+	public void salva(Grupo a) {
 		em.getTransaction().begin();
 		em.persist(a);
 		em.getTransaction().commit();
 	}
 
 	@Override
-	public List<Automovel> lista() {
+	public List<Grupo> lista() {
 		return em.
-				createQuery("select a from Automovel a", Automovel.class).getResultList();
+				createQuery("select a from Grupo a", Grupo.class).getResultList();
 	}
 
 	@Override
-	public void remove(Automovel a) {
+	public void remove(Grupo a) {
 		em.getTransaction().begin();
-		Automovel reference = em.getReference(Automovel.class, a.getId());
+		Grupo reference = em.getReference(Grupo.class, a.getId());
 		em.remove(reference);
 		em.getTransaction().commit();
 	}
 
 	@Override
-	public void atualiza(Automovel a) {
+	public void atualiza(Grupo a) {
 		em.getTransaction().begin();
 		em.merge(a);
 		em.getTransaction().commit();		
 	}
 
 	@Override
-	public Automovel buscaId(Long id) {		
-		return em.find(Automovel.class, id);
+	public Grupo buscaId(Long id) {		
+		return em.find(Grupo.class, id);
 	}
 	
 	
