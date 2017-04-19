@@ -21,7 +21,7 @@ K - > Numero de visinhos
 --> VAn: Simplicidade Des: Necessario definir o K
 
 
-K-Means - Algoritmo baseia-se na minimização de uma medida de custo, a distancia interna entre os padroes de um agrupamento.
+K-Means -(não supervionado) Algoritmo baseia-se na minimização de uma medida de custo, a distancia interna entre os padroes de um agrupamento.
 A minimização do custo garante encontrar um minimo local da função objetivo, que dependera do ponto inicial do algoritmo.
 ->Meta
 	A classificação de uma amostra desconhecida é feita com base nos centroid.
@@ -57,3 +57,47 @@ Pode ser aplicado com dados faltantes
 
 =Hidden Markow Model(HMM)
 é simples, existe bastante aplicaçõesm 
+
+
+
+
+
+=========
+SVM
+Tecnica de aprendizagem maquina que procura
+Van = 
+Bom suporte a grandes conjuntos de exemplo
+Des=
+Definir um bom kernel e parametrizar - 
+Treinamento pode ser longo dependendo do numero de exemplos e dimensao dos dados
+dificil interpretação do modelo
+--Bibiotleca mais utilizada LiSVM
+
+=====================================================
+classificação: atribui uma classe, dominio, valor fixo
+regressão: definir preço de imovel ->procurando valor continuo, valor suposto, Ex: casa com tais com caracteristica pode custar tal valor.
+
+======
+ANN-
+Se baseia em como as redes neuais funcionam.
+reconhece imagem rapidamente
+--
+RNAs - Redes Neurais Artificiais
+Fornece um metodo geral e patrico a aprendizagem de funções de valor real e de valor discreto a partir de exemplos.
+-Apropriado quando:
+	Forma da função alvo é desconhecida
+=====
+-Perceptron
+rede neurral ementar baseada em uma unidade chamada Percepton criada por Rosenblatt em 1958.
+Um perceton
+	recebe um veor de entradas de valor real
+	Calcula uma combinação linear destas entradas
+	Forne na saida:
+		"+1" se o resultado é amior que algum limiar
+		"-1" caso contratio
+
+w=pesos=treinamento
+
+====
+MNP
+
