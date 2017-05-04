@@ -101,3 +101,20 @@ w=pesos=treinamento
 ====
 MNP
 
+
+======
+Redes baisiana o que diefere no laylazys
+São os pesos
+
+
+====
+KNN pro k-means
+K mais proximos, ->supervionado, kmeans - nao supervionado. Algo em comum, conjunto de classificadores por instancia. -> olha cada caso, cada instancia
+===
+
+svm, maquina de vetor de suporte, maquina que trabalha com planos, que quebra e trabalha com eles e mais de uma dimensao.
+-===
+tipo de treinos, substituição, 
+==
+cros validation,validação cruzada,  
+
