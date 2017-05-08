@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import br.org.catolicasc.projetoP5.dao.*;
 import br.org.catolicasc.projetoP5.entity.*;
-
+import br.org.catolicasc.projetoP5.interfaces.Dao;
 import br.org.catolicasc.projetoP5.persistence.JpaUtil;
 import junit.framework.Assert;
 
@@ -22,105 +22,118 @@ public class AllTest {
 	private EnderecoDao enderecoDao = new EnderecoDao();
 	private ClienteJuridicoDao clienteJuridico = new ClienteJuridicoDao();
 	private ClienteFisicoDao clienteFisico = new ClienteFisicoDao();
+	private ProdutoDao produtoDao = new ProdutoDao();
+	private ItemPedidoDao itemPedidoDao = new ItemPedidoDao();
+	private PedidoDao pedidoDao = new PedidoDao();
 	private List<Contato> contatos;
+	private List<ItemPedido> pedidos;
 	
 	@Test
 	public void insertTest(){
-		JpaUtil.getEntityManager().getTransaction().begin();
 		Cidade cidade = new Cidade();
 		cidade.setNome("Creteriosa");
-		
-		this.cidadeDao.salva(cidade);
-		JpaUtil.getEntityManager().getTransaction().commit();
-		Assert.assertFalse(cidadeDao.listaTodos().isEmpty());
+		salvaComitaTesta(cidadeDao, cidade);
 		
 		
-		JpaUtil.getEntityManager().getTransaction().begin();
 		Endereco endereco = new Endereco();
 		endereco.setCEP("9999-9999");
 		endereco.setRua("Cratera 99");
 		endereco.setNumero("999");
 		endereco.setCidade(cidade);
-		
-		this.enderecoDao.salva(endereco);
-		JpaUtil.getEntityManager().getTransaction().commit();
-		Assert.assertFalse(enderecoDao.listaTodos().isEmpty());
+		salvaComitaTesta(enderecoDao, endereco);
 		
 		
 		//ContatoDao insert Test
-		JpaUtil.getEntityManager().getTransaction().begin();
 		Contato contato = new Contato();
 		contato.setNome("Gato Lunar");
 		contato.setEmail("gatoLunar@Lunar.lua.et");
 		contato.setDataNascimento(new Date(0));
 		contato.setEndereco(endereco);
-		
-		
-		this.contatoDao.salva(contato);
-		JpaUtil.getEntityManager().getTransaction().commit();
-		Assert.assertFalse(contatoDao.listaTodos().isEmpty());
-		
-		
+		salvaComitaTesta(contatoDao, contato);
 		
 		//GrupoDao insert Test
-		JpaUtil.getEntityManager().getTransaction().begin();
 		Grupo grupo = new Grupo();
 		grupo.setDescricao("Lunares");
 		contatos = new ArrayList<>();
 		contatos.add(contato);
 		grupo.setContatos(contatos);
-		
-		this.grupoDao.salva(grupo);
-		JpaUtil.getEntityManager().getTransaction().commit();
-		Assert.assertFalse(grupoDao.listaTodos().isEmpty());
-		
+		salvaComitaTesta(grupoDao, grupo);
 		
 		//ClienteJuridicoDao insert Test
-		JpaUtil.getEntityManager().getTransaction().begin();
 		ClienteJuridico clienteRico = new ClienteJuridico();
 		clienteRico.setNome("Gato Lunar Rico");
 		clienteRico.setCNPJ("9999999");
-		
-		this.clienteJuridico.salva(clienteRico);
-		JpaUtil.getEntityManager().getTransaction().commit();
-		Assert.assertFalse(clienteJuridico.listaTodos().isEmpty());
+		salvaComitaTesta(clienteJuridico, clienteRico);
 		
 		//ClienteJuridicoDao insert Test
-		JpaUtil.getEntityManager().getTransaction().begin();
 		ClienteFisico clientePobre = new ClienteFisico();
 		clientePobre.setNome("Gato Lunar Pobre");
 		clientePobre.setCPF("6666666");
-				
-		this.clienteFisico.salva(clientePobre);
-		JpaUtil.getEntityManager().getTransaction().commit();
-		Assert.assertFalse(clienteFisico.listaTodos().isEmpty());
+		salvaComitaTesta(clienteFisico, clientePobre);
+		
+		//ItemPeido Pedidoinsert Test
+		Produto naveCara = new Produto();
+		naveCara.setNome("Cruzador");
+		naveCara.setDescricao("Nave de batalha com HyperDrive");
+		naveCara.setPreco(987654321.123456789);
+		salvaComitaTesta(produtoDao, naveCara);
+		Produto naveBarata = new Produto();
+		naveBarata.setNome("Caranca Espacial");
+		naveBarata.setDescricao("Nave de madeira com propulsor a helice");
+		naveBarata.setPreco(2.0);
+		salvaComitaTesta(produtoDao, naveBarata);
+		
+		ItemPedido pedidoCaro = new ItemPedido();
+		pedidoCaro.setProduto(naveCara);
+		salvaComitaTesta(itemPedidoDao, pedidoCaro);
+		ItemPedido pedidoBarato = new ItemPedido();
+		pedidoBarato.setProduto(naveBarata);
+		salvaComitaTesta(itemPedidoDao, pedidoBarato);
+		
+		
+		Pedido pedidoComum = new Pedido();
+		pedidoComum.setClienteFisico(clientePobre);
+		pedidos = new ArrayList<>();
+		pedidos.add(pedidoBarato);
+		pedidoComum.setPedidos(pedidos);
+		salvaComitaTesta(pedidoDao, pedidoComum);
+		
+		Pedido pedidoVIP = new Pedido();
+		pedidoVIP.setClienteJuridico(clienteRico);
+		pedidos = new ArrayList<>();
+		pedidos.add(pedidoCaro);
+		pedidoVIP.setPedidos(pedidos);
+		salvaComitaTesta(pedidoDao, pedidoVIP);
+		
 		
 		
 		
 		
 		//MarcaDao insert Test
-		JpaUtil.getEntityManager().getTransaction().begin();
 		Marca marca = new Marca();
 		marca.setNome("Fiat");
-		
 		Modelo modelo = new Modelo();
 		modelo.setNome("Palio");
 		modelo.setMontadora(marca);
-		marca.addModelo(modelo);
+		marca.addModelo(modelo);	
+		salvaComitaTesta(marcaDao, marca);
 		
-		this.marcaDao.salva(marca);
-		
-		
-		JpaUtil.getEntityManager().getTransaction().commit();
-		Assert.assertFalse(marcaDao.listaTodos().isEmpty());
-		
+		//=======================================
 		listaContato();
 		listaGrupo();
 		listaCliente();
-		listaMarcaModelo();
+		listaPedido();
+		//listaMarcaModelo();
 		
 		
 		
+	}
+	
+	public <T> void salvaComitaTesta(Dao<T> dao,T classe){
+		JpaUtil.getEntityManager().getTransaction().begin();
+		dao.salva(classe);
+		JpaUtil.getEntityManager().getTransaction().commit();
+		Assert.assertFalse(dao.listaTodos().isEmpty());
 	}
 	
 	public void editTest(){
@@ -185,6 +198,28 @@ public class AllTest {
 			System.out.println("======================");
 			System.out.println("Nome: " + cf.getNome());
 			System.out.println("CPF: " + cf.getCPF());
+		}
+		System.out.println("----------------------");
+	}
+	
+	public void listaPedido(){
+		System.out.println("AllTest.listaPedido()");
+		for(Pedido ped : this.pedidoDao.listaTodos()){
+			System.out.println("======================");
+			if(ped.getClienteFisico() != null){
+				System.out.println("Cliente: " + ped.getClienteFisico().getNome());
+			}else{
+				System.out.println("Cliente: " + ped.getClienteJuridico().getNome());
+			}
+			
+			
+			
+			System.out.println("-Pedidos-");
+			for(ItemPedido itp: ped.getPedidos()){
+				System.out.println("Nome: " + itp.getProduto().getNome());
+				System.out.println("Descrição: " + itp.getProduto().getDescricao());
+				System.out.println("Preco: R$:" + itp.getProduto().getPreco());
+			}
 		}
 		System.out.println("----------------------");
 	}
