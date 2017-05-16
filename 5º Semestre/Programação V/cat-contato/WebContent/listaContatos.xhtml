@@ -1,0 +1,44 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	<h:body>
+		<h:form>
+		<h:dataTable value="#{contatoBean.contatos}" 
+		var="contato" border="1">
+			<h:column>
+				<f:facet name="header">ID</f:facet>
+				#{contato.id}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Nome</f:facet>
+				#{contato.nome}
+			</h:column>
+			<h:column>
+				<f:facet name="header">E-mail</f:facet>			
+				#{contato.email}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Data de Nascimento</f:facet>
+				#{contato.dataNascimento}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Endereço</f:facet>
+				#{contato.endereco}
+			</h:column>
+			<!--  aula 14 -->
+			<h:column>
+				<f:facet name="header">Ações</f:facet>
+				<h:commandLink value="Exclui"
+				 action="#{contatoBean.exclui(contato)}" /> |
+				<h:commandLink value="Edita"
+				 action="#{contatoBean.edita(contato)}" /> 				  
+			</h:column>
+			<!--  aula 14 -->
+		</h:dataTable>
+		</h:form>
+	</h:body>
+</html>
+
+
+
+

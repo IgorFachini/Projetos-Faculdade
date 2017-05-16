@@ -1,0 +1,20 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:body>
+	<h:form>
+		<h:panelGrid columns="2">
+		Id: <h:inputText value="#{contatoBean.contato.id}" />
+		Nome: <h:inputText value="#{contatoBean.contato.nome}" />
+		Email: <h:inputText value="#{contatoBean.contato.email}" />
+		Data de nascimento: <h:inputText
+				value="#{contatoBean.contato.dataNascimento}" />
+		Endereço: <h:inputText value="#{contatoBean.contato.endereco}" />
+
+			<h:commandButton value="Salvar" action="#{contatoBean.salva}" />
+		</h:panelGrid>
+	</h:form>
+
+</h:body>
+
+</html>
