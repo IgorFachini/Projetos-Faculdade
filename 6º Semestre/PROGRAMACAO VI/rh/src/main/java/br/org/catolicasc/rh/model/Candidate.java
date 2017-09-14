@@ -2,22 +2,27 @@ package br.org.catolicasc.rh.model;
 
 import java.util.List;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 
-import br.org.catolicasc.rh.adapter.JobAdapter;
+import br.org.catolicasc.rh.model.Bean;
 
-public class Candidate {
+
+@Entity
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Candidate implements Bean{
+	@Id
+	@GeneratedValue
 	private Long id;
-
-//	@XmlElementWrapper(name = "jobs2")
-//	@XmlElement(name = "job2")
-//	@XmlJavaTypeAdapter(value = JobAdapter.class)
+	@OneToMany(cascade = CascadeType.ALL)
 	private List<Job> jobs;
 
-//	@XmlElementWrapper(name = "courses")
-//	@XmlElement(name = "course")
+	@OneToMany(cascade = CascadeType.ALL)
 	private List<Course> courses;
 	private String name;
 	private int age;
@@ -126,6 +131,73 @@ public class Candidate {
 	public void setStatus(Employee status) {
 		this.status = status;
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + age;
+		result = prime * result + ((courses == null) ? 0 : courses.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		long temp;
+		temp = Double.doubleToLongBits(intentedSalary);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((jobs == null) ? 0 : jobs.hashCode());
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((schooling == null) ? 0 : schooling.hashCode());
+		result = prime * result + ((status == null) ? 0 : status.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Candidate other = (Candidate) obj;
+		if (age != other.age)
+			return false;
+		if (courses == null) {
+			if (other.courses != null)
+				return false;
+		} else if (!courses.equals(other.courses))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (Double.doubleToLongBits(intentedSalary) != Double.doubleToLongBits(other.intentedSalary))
+			return false;
+		if (jobs == null) {
+			if (other.jobs != null)
+				return false;
+		} else if (!jobs.equals(other.jobs))
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (schooling == null) {
+			if (other.schooling != null)
+				return false;
+		} else if (!schooling.equals(other.schooling))
+			return false;
+		if (status != other.status)
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Candidate [id=" + id + ", jobs=" + jobs + ", courses=" + courses + ", name=" + name + ", age=" + age
+				+ ", intentedSalary=" + intentedSalary + ", schooling=" + schooling + ", status=" + status + "]";
+	}
+	
 	
 	
 	

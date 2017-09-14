@@ -2,18 +2,22 @@ package br.org.catolicasc.rh.model;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlTransient;
 
+import br.org.catolicasc.rh.model.Bean;
+
+@Entity
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Job {
+public class Job implements Bean{
 	
-//	@Id
-//	@GeneratedValue
-	private long id;
+	@Id
+	@GeneratedValue
+	private Long id;
 
 
 	private String company;
@@ -31,7 +35,7 @@ public class Job {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Job(long id) {
+	public Job(Long id) {
 		this();
 		this.id = id;
 	}
@@ -48,11 +52,11 @@ public class Job {
 	
 	
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	
@@ -88,4 +92,64 @@ public class Job {
 		this.performedActivities = performedActivities;
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((city == null) ? 0 : city.hashCode());
+		result = prime * result + ((company == null) ? 0 : company.hashCode());
+		result = prime * result + (int) (id ^ (id >>> 32));
+		result = prime * result + ((initDate == null) ? 0 : initDate.hashCode());
+		result = prime * result + ((performedActivities == null) ? 0 : performedActivities.hashCode());
+		result = prime * result + ((resignationDate == null) ? 0 : resignationDate.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Job other = (Job) obj;
+		if (city == null) {
+			if (other.city != null)
+				return false;
+		} else if (!city.equals(other.city))
+			return false;
+		if (company == null) {
+			if (other.company != null)
+				return false;
+		} else if (!company.equals(other.company))
+			return false;
+		if (id != other.id)
+			return false;
+		if (initDate == null) {
+			if (other.initDate != null)
+				return false;
+		} else if (!initDate.equals(other.initDate))
+			return false;
+		if (performedActivities == null) {
+			if (other.performedActivities != null)
+				return false;
+		} else if (!performedActivities.equals(other.performedActivities))
+			return false;
+		if (resignationDate == null) {
+			if (other.resignationDate != null)
+				return false;
+		} else if (!resignationDate.equals(other.resignationDate))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Job [id=" + id + ", company=" + company + ", city=" + city + ", resignationDate=" + resignationDate
+				+ ", initDate=" + initDate + ", performedActivities=" + performedActivities + "]";
+	}
+	
+	
+	
 }
